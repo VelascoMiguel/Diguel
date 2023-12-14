@@ -1,0 +1,356 @@
+:root {
+  --color-dark-rgb: 0, 0, 0;
+  --color-dark: rgba(var(--color-dark-rgb), 1);
+  --color-light-rgb: 245, 247, 250;
+  --color-light: rgba(var(--color-light-rgb), 1);
+  --color-white-rgb: 255, 255, 255;
+  --color-white: rgba(var(--color-white-rgb), 1);
+  --color-black-rgb: 0, 0, 0;
+  --color-black: rgba(var(--color-black-rgb), 1);
+  --color-primary: #fe4f31;
+  --color-secondary: #ffe600;
+  --color-gray: #c1c3c7;
+  --color-lightgray: #e6e8eb;
+  --color-border-rgb: 159, 161, 163;
+  --color-border: rgba(var(--color-border-rgb), 0.225);
+  --color-border-600: rgba(var(--color-border-rgb), 0.35);
+  --color-border-800: rgba(var(--color-border-rgb), 0.45);
+  --color-border-900: rgba(var(--color-border-rgb), 1);
+  --color-border-light: var(--color-border-light);
+  --color-text: rgba(var(--color-dark-rgb), 0.7);
+  --color-text-light: rgba(var(--color-light-rgb), 0.7);
+  --color-alert-error: var(--color-primary);
+  --color-alert-success: #46d054;
+  --animation-primary: 0.4s cubic-bezier(0.75, 0, 0.25, 1);
+  --animation-fast: 0.2s cubic-bezier(0.75, 0, 0.25, 1);
+  --animation-smooth: 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+  --animation-navigation: 1.2s cubic-bezier(0.75, 0, 0.25, 1);
+  --animation-navigation: 0.6s cubic-bezier(0.6, 0, 0.4, 1);
+  --animation-navigation-forward: 1s cubic-bezier(0.8, 0, 0.1, 1);
+  --animation-navigation-backward: 0.6s cubic-bezier(0.8, 0, 0.1, 1);
+  --animation-navigation-fade: 0.3s ease-in-out;
+  --section-padding: min(9vw, 9em);
+  --container-padding: var(--col-gap);
+  --row-padding: clamp(2em, 4vw, 4em);
+  --col-padding: clamp(2em, 4vw, 4em);
+  --row-gap: max(1.75em, 1.75vw);
+  --col-gap: max(1.75em, 1.75vw);
+  --title-size: max(5em, 7.5vw);
+  --border-radius: 0.35em;
+  --main-navigation-height: 4.6em;
+  --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 4);
+  --colors-gray1: hsl(0 0% 99%);
+  --colors-gray2: hsl(0 0% 97.3%);
+  --colors-gray3: hsl(0 0% 95.1%);
+  --colors-gray4: hsl(0 0% 93%);
+  --colors-gray5: hsl(0 0% 90.9%);
+  --colors-gray6: hsl(0 0% 88.7%);
+  --colors-gray7: hsl(0 0% 85.8%);
+  --colors-gray8: hsl(0 0% 78%);
+  --colors-gray9: hsl(0 0% 56.1%);
+  --colors-gray10: hsl(0 0% 52.3%);
+  --colors-gray11: hsl(0 0% 43.5%);
+  --colors-gray12: hsl(0 0% 9%);
+  --colors-grayA1: hsl(0 0% 0% / 0.012);
+  --colors-grayA2: hsl(0 0% 0% / 0.027);
+  --colors-grayA3: hsl(0 0% 0% / 0.047);
+  --colors-grayA4: hsl(0 0% 0% / 0.071);
+  --colors-grayA5: hsl(0 0% 0% / 0.09);
+  --colors-grayA6: hsl(0 0% 0% / 0.114);
+  --colors-grayA7: hsl(0 0% 0% / 0.141);
+  --colors-grayA8: hsl(0 0% 0% / 0.22);
+  --colors-grayA9: hsl(0 0% 0% / 0.439);
+  --colors-grayA10: hsl(0 0% 0% / 0.478);
+  --colors-grayA11: hsl(0 0% 0% / 0.565);
+  --colors-grayA12: hsl(0 0% 0% / 0.91);
+  --colors-bg: #fff;
+  --colors-lowContrast: #ffffff;
+  --colors-highContrast: black;
+  --colors-blue1: hsl(206 100% 99.2%);
+  --colors-blue2: hsl(210 100% 98%);
+  --colors-blue3: hsl(209 100% 96.5%);
+  --colors-blue4: hsl(210 98.8% 94%);
+  --colors-blue5: hsl(209 95% 90.1%);
+  --colors-blue6: hsl(209 81.2% 84.5%);
+  --colors-blue7: hsl(208 77.5% 76.9%);
+  --colors-blue8: hsl(206 81.9% 65.3%);
+  --colors-blue9: hsl(206 100% 50%);
+  --colors-blue10: hsl(208 100% 47.3%);
+  --colors-blue11: hsl(211 100% 43.2%);
+  --colors-blue12: hsl(211 100% 15%);
+  --colors-blueA1: hsl(210 100% 51% / 0.016);
+  --colors-blueA2: hsl(210 100% 51% / 0.04);
+  --colors-blueA3: hsl(210 100% 50.3% / 0.071);
+  --colors-blueA4: hsl(210 100% 50.1% / 0.118);
+  --colors-blueA5: hsl(208 99.1% 47.1% / 0.189);
+  --colors-blueA6: hsl(209 99.5% 45.3% / 0.283);
+  --colors-blueA7: hsl(208 99.9% 43.8% / 0.412);
+  --colors-blueA8: hsl(206 99.8% 45.1% / 0.632);
+  --colors-blueA9: hsl(206 100% 50% / 0.98);
+  --colors-blueA10: hsl(208 100% 47.2% / 0.98);
+  --colors-blueA11: hsl(212 100% 43% / 0.98);
+  --colors-blueA12: hsl(213 100% 14.4% / 0.98);
+  --colors-green1: hsl(136 50% 98.9%);
+  --colors-green2: hsl(138 62.5% 96.9%);
+  --colors-green3: hsl(139 55.2% 94.5%);
+  --colors-green4: hsl(140 48.7% 91%);
+  --colors-green5: hsl(141 43.7% 86%);
+  --colors-green6: hsl(143 40.3% 79%);
+  --colors-green7: hsl(146 38.5% 69%);
+  --colors-green8: hsl(151 40.2% 54.1%);
+  --colors-green9: hsl(151 55% 41.5%);
+  --colors-green10: hsl(152 57.5% 37.6%);
+  --colors-green11: hsl(153 67% 28.5%);
+  --colors-green12: hsl(155 40% 14%);
+  --colors-amber1: hsl(39 70% 99%);
+  --colors-amber2: hsl(40 100% 96.5%);
+  --colors-amber3: hsl(44 100% 91.7%);
+  --colors-amber4: hsl(43 100% 86.8%);
+  --colors-amber5: hsl(42 100% 81.8%);
+  --colors-amber6: hsl(38 99.7% 76.3%);
+  --colors-amber7: hsl(36 86.1% 67.1%);
+  --colors-amber8: hsl(35 85.2% 55.1%);
+  --colors-amber9: hsl(39 100% 57%);
+  --colors-amber10: hsl(35 100% 55.5%);
+  --colors-amber11: hsl(30 100% 34%);
+  --colors-amber12: hsl(20 80% 17%);
+  --colors-red1: hsl(359 100% 99.4%);
+  --colors-red2: hsl(359 100% 98.6%);
+  --colors-red3: hsl(360 100% 96.8%);
+  --colors-red4: hsl(360 97.9% 94.8%);
+  --colors-red5: hsl(360 90.2% 91.9%);
+  --colors-red6: hsl(360 81.7% 87.8%);
+  --colors-red7: hsl(359 74.2% 81.7%);
+  --colors-red8: hsl(359 69.5% 74.3%);
+  --colors-red9: hsl(358 75% 59%);
+  --colors-red10: hsl(358 69.4% 55.2%);
+  --colors-red11: hsl(358 65% 48.7%);
+  --colors-red12: hsl(354 50% 14.6%);
+  --colors-focus: var(--colors-amber9);
+  --fonts-body: X, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --fonts-mono: Menlo, monospace;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  --space-9: 72px;
+  --space-10: 80px;
+  --space-11: 88px;
+  --fontWeights-400: 400;
+  --fontWeights-500: 500;
+  --fontWeights-600: 600;
+  --fontWeights-700: 700;
+  --fontWeights-800: 800;
+  --lineHeights-12: 12px;
+  --lineHeights-16: 16px;
+  --lineHeights-20: 20px;
+  --lineHeights-24: 24px;
+  --lineHeights-32: 32px;
+  --lineHeights-40: 40px;
+  --lineHeights-48: 48px;
+  --lineHeights-56: 56px;
+  --fontSizes-10: 10px;
+  --fontSizes-12: 12px;
+  --fontSizes-14: 14px;
+  --fontSizes-16: 16px;
+  --fontSizes-20: 20px;
+  --fontSizes-24: 24px;
+  --fontSizes-32: 32px;
+  --fontSizes-40: 40px;
+  --fontSizes-48: 48px;
+  --radii-1: 4px;
+  --radii-2: 8px;
+  --radii-3: 16px;
+  --radii-round: 9999px;
+  --shadows-small: 0 5px 10px rgba(0, 0, 0, 0.12);
+  --shadows-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadows-large: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --shadows-tooltip: 0px 4px 8px 0px rgba(0, 0, 0, 0.04),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.02);
+  --transitions-snappy: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@font-face {
+  font-family: "MonumentExtended";
+  src: local("MonumentExtended"),
+    url("../font/MonumentExtended-Regular.woff2") format("woff2");
+  /* Agrega aquí otros formatos de fuente si los tienes disponibles */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: HelveticaNowDisplay, -apple-system, BlinkMacSystemFont,
+    avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu,
+    roboto, noto, arial, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  z-index: 1; /* Reducimos el z-index del header */
+  background-color: #000;
+  color: #fff;
+}
+
+.grid {
+  width: 100vw; /* Ajusta el tamaño del contenedor de la cuadrícula */
+  height: 100vh; /* Ajusta el tamaño del contenedor de la cuadrícula */
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; /* Elimina el espacio entre los cuadrados */
+  z-index: 0;
+}
+
+.cuadrado {
+  width: 20px; /* Ajusta el tamaño de cada cuadrado */
+  height: 20px; /* Ajusta el tamaño de cada cuadrado */
+  margin: 0;
+  padding: 0;
+  border: 1px solid #bebebe1a; /* Borde delgado, negro en este caso */
+  box-sizing: border-box; /* Para incluir el borde en el tamaño total del cuadrado */
+  transition: background-color 0.4s ease; /* Duración y tipo de transición */
+}
+
+nav {
+  width: 100%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
+  margin-left: 1%;
+}
+
+.hrefs {
+  display: flex;
+  gap: 30px;
+  margin-right: 1%;
+}
+
+.hrefs > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 400;
+}
+
+.box {
+  background-color: #fff;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+.box1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.box2 {
+  grid-column: 2/2;
+  grid-row: 1/2;
+}
+
+.box3 {
+  grid-column: 1/2;
+  grid-row: 2/2;
+}
+
+.box4 {
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+
+.company {
+  width: 90%;
+  margin: auto;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.company > h1 {
+  font-family: "MonumentExtended", "sans-serif";
+  font-size: calc(var(--title-size) * 1.5);
+  font-weight: bold;
+}
+
+.company > p {
+  font-size: calc(var(--title-size) * 0.2);
+}
+
+.mini-desktop {
+  width: 15%;
+  margin: auto;
+  display: flex;
+  background-color: #fff;
+  justify-content: space-evenly;
+  padding: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+  border: 1px solid var(--colors-gray10);
+}
+
+.mini-desktop > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.mini-desktop > a > svg {
+  color: var(--colors-gray10) !important;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background-color: #e4e4e4;
+  border-radius: 9999px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mini-desktop > a > svg:hover {
+  transform: scale(1.15);
+}
+
+#moon:hover {
+  transform: scale(1.15);
+}
+
+.boxWork {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 15%;
+  height: 15%;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.boxWork > p {
+  color: #000;
+}
