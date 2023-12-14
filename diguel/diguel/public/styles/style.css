@@ -198,27 +198,25 @@ header {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  z-index: 1; /* Reducimos el z-index del header */
   background-color: #000;
   color: #fff;
 }
 
-.grid {
-  width: 100vw; /* Ajusta el tamaño del contenedor de la cuadrícula */
-  height: 100vh; /* Ajusta el tamaño del contenedor de la cuadrícula */
+/* .grid {
+  width: 100vw;
+  height: 100%;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  gap: 0; /* Elimina el espacio entre los cuadrados */
   z-index: 0;
-}
+} */
 
 .cuadrado {
   width: 20px; /* Ajusta el tamaño de cada cuadrado */
   height: 20px; /* Ajusta el tamaño de cada cuadrado */
   margin: 0;
   padding: 0;
-  border: 1px solid #bebebe1a; /* Borde delgado, negro en este caso */
+  border: 0.3px solid #bebebe1a; /* Borde delgado, negro en este caso */
   box-sizing: border-box; /* Para incluir el borde en el tamaño total del cuadrado */
   transition: background-color 0.4s ease; /* Duración y tipo de transición */
 }
@@ -226,9 +224,57 @@ header {
 nav {
   width: 100%;
   margin: auto;
-  height: auto;
+  height: 10%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.navContainer {
+  display: flex;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.mini-desktop {
+  width: 15%;
+  margin: auto;
+  display: flex;
+  background-color: hsla(0, 0%, 23%, 0.08);
+  border: 0.625rem solid hsla(0, 0%, 78%, 0.02);
+  justify-content: space-evenly;
+  border-radius: 2.5rem;
+  padding: 0.25rem;
+}
+
+.mini-desktop > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.mini-desktop > a > svg {
+  color: var(--colors-gray10) !important;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background-color: #e4e4e4;
+  border-radius: 9999px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mini-desktop > a > svg:hover {
+  transform: scale(1.15);
+}
+
+#moon:hover {
+  transform: scale(1.15);
 }
 
 .logo {
@@ -251,6 +297,11 @@ nav {
   text-decoration: none;
   color: #fff;
   font-size: 400;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hrefs > a:hover {
+  transform: scale(1.1);
 }
 
 .box {
@@ -297,60 +348,54 @@ nav {
   font-weight: bold;
 }
 
-.company > p {
+.descrip {
+  display: flex;
+}
+
+.descrip > p {
   font-size: calc(var(--title-size) * 0.2);
 }
 
-.mini-desktop {
-  width: 15%;
-  margin: auto;
-  display: flex;
-  background-color: #fff;
-  justify-content: space-evenly;
-  padding: 10px;
-  padding-right: 5px;
-  padding-left: 5px;
-  border-radius: 40px;
-  margin-bottom: 10px;
-  border: 1px solid var(--colors-gray10);
-}
-
-.mini-desktop > a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.mini-desktop > a > svg {
-  color: var(--colors-gray10) !important;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  background-color: #e4e4e4;
-  border-radius: 9999px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.mini-desktop > a > svg:hover {
-  transform: scale(1.15);
-}
-
-#moon:hover {
-  transform: scale(1.15);
-}
-
+/* .red-text {
+  color: var(--color-primary);
+} */
 .boxWork {
   position: absolute;
   right: 0;
   bottom: 10px;
-  width: 15%;
-  height: 15%;
+  width: 12%;
+  height: 12%;
   background-color: #fff;
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .boxWork > p {
   color: #000;
+}
+
+.scrollCircle {
+  position: relative;
+  width: 200px; /* Ajusta según sea necesario */
+  height: 200px; /* Ajusta según sea necesario */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+.circleTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

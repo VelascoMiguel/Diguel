@@ -53,30 +53,19 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="grid">
-    </div>
+    <div class="grid"></div>
     <header>
       <nav>
-        <div class="logo">
-          <div class="box box1"></div>
-          <div class="box box2"></div>
-          <div class="box box3"></div>
-          <div class="box box4"></div>
+        <div class="navContainer">
+          <div class="mini-desktop">
+            <a href="">About</a>
+            <a href="">Services</a>
+            <a href="">Work</a>
+            <a href="">Contact</a>
+          </div>
         </div>
-        <div class="hrefs">
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
-        </div>
-      </nav>
 
-      <section class="company">
-        <h1>DIGUEL</h1>
-        <p>We help you turn your dreams into a digital reality.</p>
-      </section>
-
-      <!-- <div class="mini-desktop">
-        <a href=""
+        <!-- <a href=""
           ><svg
             aria-hidden="true"
             width="24"
@@ -176,12 +165,45 @@
               <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
               <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
             </g></svg
-        ></a>
-      </div> -->
+        ></a> -->
+
+        <!-- <div class="logo">
+          <div class="box box1"></div>
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+          <div class="box box4"></div>
+        </div>
+        <div class="hrefs">
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Projects</a>
+          <a href="">Contact</a>
+        </div> -->
+      </nav>
+
+      <section class="company">
+        <h1>DIGUEL</h1>
+        <div class="descrip">
+          <p>
+            We help <span class="red-text">you</span> turn your dreams
+            <span class="red-text">into a digital reality</span>.
+          </p>
+        </div>
+        <div class="scrollCircle">
+          <div class="circle circleOne"></div>
+          <div class="circle circleTwo">
+            <i
+              id="arrowScroll"
+              class="fa-solid fa-arrow-down"
+              style="color: #ffffff"
+            ></i>
+          </div>
+        </div>
+      </section>
 
       <div class="boxWork">
         <p>Let's work together</p>
-        <i class="fa-solid fa-arrow-right" style="color:#000;"></i>
+        <i class="fa-solid fa-arrow-right" style="color: #000"></i>
       </div>
     </header>
   </body>
