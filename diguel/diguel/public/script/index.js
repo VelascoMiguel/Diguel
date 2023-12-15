@@ -65,62 +65,67 @@ const texts = [
 let lastBox = null;
 let lastSection = null;
 
-softwareDevelopment.addEventListener("mouseenter", () => {
-  if (lastBox != null && lastSection != null) {
-    lastBox.style.backgroundColor = "#6d6d6d";
-    changeBorder(lastSection);
-  }
-  softwareDevelopment.style.borderBottom = '1px solid #6d6d6d';
-  changeText(texts[0]);
-  changeBackground(box1);
-  lastBox = box1;
-  lastSection = softwareDevelopment;
-});
-
-productDesign.addEventListener("mouseenter", () => {
-  if (lastBox != null && lastSection != null) {
-    lastBox.style.backgroundColor = "#6d6d6d";
-    changeBorder(lastSection);
-  }
-  productDesign.style.borderBottom = '1px solid #6d6d6d';
-  changeText(texts[1]);
-  changeBackground(box2);
-  lastBox = box2;
-  lastSection = productDesign;
-});
-
-serverArchitecture.addEventListener("mouseenter", () => {
-  if (lastBox != null && lastSection != null) {
-    lastBox.style.backgroundColor = "#6d6d6d";
-    changeBorder(lastSection);
-  }
-  serverArchitecture.style.borderBottom = '1px solid #6d6d6d';
-  changeText(texts[2]);
-  changeBackground(box3);
-  lastBox = box3;
-  lastSection = serverArchitecture;
-});
-
-webDevelopment.addEventListener("mouseenter", () => {
-  if (lastBox != null && lastSection != null) {
-    lastBox.style.backgroundColor = "#6d6d6d";
-    changeBorder(lastSection);
-  }
-  webDevelopment.style.borderBottom = '1px solid #6d6d6d';
-  changeText(texts[3]);
-  changeBackground(box4);
-  lastBox = box4;
-  lastSection = webDevelopment;
-});
+function modifySection(boxOrSection, positionArrayText, numberBox, section) {
+  boxOrSection.addEventListener("mouseenter", () => {
+    if (lastBox != null && lastSection != null) {
+      lastBox.style.backgroundColor = "#131313";
+      changeBorder(lastSection);
+    }
+    section.style.borderBottom = "1px solid #6d6d6d";
+    changeText(texts[positionArrayText]);
+    let boxSearched = searchBox(numberBox);
+    changeBackground(boxSearched);
+    lastBox = boxSearched;
+    lastSection = section;
+  });
+}
 
 function changeText(texto) {
-  textContentSection.textContent = texto;
-}
+    textContentSection.textContent = texto;
+  }
+  
+  function changeBorder(section) {
+    section.style.borderBottom = "1px solid transparent";
+  }
+  
+  function changeBackground(box) {
+    box.style.backgroundColor = "#fff";
+  }
+  
+  function searchBox(numberBox) {
+      let box = null;
+    switch (numberBox) {
+      case 1:
+          box = box1;
+        break;
+      case 2:
+          box = box2;
+        break;
+      case 3:
+          box = box3;
+        break;
+      case 4:
+          box = box4;
+        break;
+      default:
+        break;
+    }
+    return box;
+  }
 
-function changeBorder(section) {
-  section.style.borderBottom = "1px solid transparent";
-}
+modifySection(webDevelopment, 3, 4, webDevelopment);
+modifySection(serverArchitecture, 2, 3, serverArchitecture);
+modifySection(productDesign, 1, 2, productDesign);
+modifySection(softwareDevelopment, 0, 1, softwareDevelopment);
+modifySection(box4, 3, 4, webDevelopment);
+modifySection(box3, 2, 3, serverArchitecture);
+modifySection(box2, 1, 2, productDesign);
+modifySection(box1, 0, 1, softwareDevelopment);
 
-function changeBackground(box) {
-  box.style.backgroundColor = "#fff";
-}
+const cardMobile = document.querySelector('.cardMobile');
+const backMobile = document.querySelector('.backMobile');
+
+cardMobile.addEventListener('mouseenter', () =>{
+    cardMobile.style.zIndex = 1;
+    backMobile.style.zIndex = 9999;
+})
