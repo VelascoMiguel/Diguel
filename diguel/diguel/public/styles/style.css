@@ -41,22 +41,6 @@
   --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 4);
 }
 
-.grid {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 0 2em;
-  display: flex;
-  justify-content: space-between;
-  z-index: -1;
-}
-.grid .grid-line {
-  width: 1px;
-  background: rgba(121, 113, 113, 0.37);
-}
-
 @font-face {
   font-family: "MonumentExtended";
   src: local("MonumentExtended"),
@@ -90,6 +74,7 @@ html {
 body {
   background-color: #000;
   color: #fff;
+  z-index: 1;
 }
 
 body::-webkit-scrollbar {
@@ -101,15 +86,6 @@ header {
   flex-direction: column;
   height: 100vh;
 }
-
-/* .grid {
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  z-index: 0;
-} */
 
 .cuadrado {
   width: 20px; /* Ajusta el tamaño de cada cuadrado */
@@ -273,7 +249,7 @@ nav {
 }
 
 .company {
-  width: 90%;
+  width: 100%;
   margin: auto;
   height: 90%;
   display: flex;
@@ -286,6 +262,7 @@ nav {
   font-family: "MonumentExtended", "sans-serif";
   font-size: calc(var(--title-size) * 1.5);
   font-weight: bold;
+  z-index: 9999;
 }
 
 .descrip {
@@ -385,6 +362,7 @@ nav {
 
 .descripAbout > h2 > span {
   color: #6d6d6d;
+  transition: transform 0.3s ease-in-out;
 }
 
 .cubeContainer {
@@ -470,16 +448,16 @@ nav {
   line-height: 1;
 }
 
-.scrollTechs{
+.scrollTechs {
   width: 200%;
   margin-top: 15vh;
 }
 
 .imagesContainer {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  gap:140px;
+  gap: 140px;
   animation: scrollImages 40s linear infinite; /* Ajusta el tiempo según tu preferencia */
 }
 
@@ -488,19 +466,22 @@ nav {
   /* Añade estilos adicionales según sea necesario */
 }
 
-.imagesContainer2 {
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  gap:140px;
-  margin-top: 5vh;
-  animation: scrollImages 40s linear infinite; /* Ajusta el tiempo según tu preferencia */
-  animation-direction: reverse; /* Cambia la dirección de la animación */
+.scrollWeb {
+  background-color: #fff;
+  color: #000;
+  width: 80px;
+  height: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 9999px;
 }
 
-.imagesContainer2 img {
-  height: auto; /* Mantén la proporción */
-  /* Añade estilos adicionales según sea necesario */
+.scrollMobile {
+  background-color: #fff;
+  color: #000;
+  width: 80px;
+  height: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 9999px;
 }
 
 @keyframes scrollImages {
@@ -508,7 +489,9 @@ nav {
     transform: translateX(0); /* Posición inicial */
   }
   100% {
-    transform: translateX(-100%); /* Mueve las imágenes de derecha a izquierda */
+    transform: translateX(
+      -100%
+    ); /* Mueve las imágenes de derecha a izquierda */
   }
 }
 
@@ -637,4 +620,52 @@ nav {
 
 .cardFrontend {
   background-image: url(../images/frontend.png);
+}
+
+.bestProjects {
+  width: 100%;
+  background-color: #fff;
+  height: 100vh;
+  margin-top: 15vh;
+}
+
+.containerBestProjects {
+  width: 90%;
+  margin: auto;
+}
+
+.containerBestProjects > h2 {
+  font-family: "MonumentExtended", "sans-serif";
+  font-size: calc(var(--title-size) * 1);
+  font-weight: bold;
+  color: #000;
+}
+
+.containerBestProjects > p {
+  font-family: "MonumentGrotesk", "sans-serif";
+  font-size: calc(var(--title-size) * 0.3);
+  color: #000;
+  line-height: 82%;
+}
+
+.team{
+  width: 90%;
+  margin:auto;
+  height: 70vh;
+  margin-top: 15vh;
+}
+
+.containerCardsTeam{
+  width: 100%;
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  height: 90%;
+  background-color: red;
+  margin-top: 5vh;
+}
+
+.cardTeam1{
+  grid-column: 1/4;
+  height: 100%;
+  
 }
