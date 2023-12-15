@@ -28,20 +28,25 @@
 //   });
 // });
 
-// const scrollCircle = document.querySelector('.scrollCircle');
-// const circleOne = document.querySelector('.circleOne');
-// const circleTwo = document.querySelector('.circleTwo');
+const scrollCircle = document.querySelector(".scrollCircle");
+const circleOne = document.querySelector(".circleOne");
+const circleTwo = document.querySelector(".circleTwo");
 
-// scrollCircle.addEventListener('mousemove', (e) => {
-//   const x = e.clientX - scrollCircle.getBoundingClientRect().left;
-//   const y = e.clientY - scrollCircle.getBoundingClientRect().top;
 
-//   circleTwo.style.left = `${x}px`;
-//   circleTwo.style.top = `${y}px`;
+scrollCircle.addEventListener("mousemove", (e) => {
+  const x = e.clientX - scrollCircle.getBoundingClientRect().left;
+  const y = e.clientY - scrollCircle.getBoundingClientRect().top;
 
-//   circleOne.style.left = `${x / 1.1}px`; // Ajusta la velocidad de seguimiento cambiando este valor
-//   circleOne.style.top = `${y / 1.1}px`; // Ajusta la velocidad de seguimiento cambiando este valor
-// });
+  circleTwo.style.left = `${x}px`;
+  circleTwo.style.top = `${y}px`;
+
+  circleOne.style.left = `${x / 1.1}px`; // Ajusta la velocidad de seguimiento cambiando este valor
+  circleOne.style.top = `${y / 1.1}px`; // Ajusta la velocidad de seguimiento cambiando este valor
+});
+
+scrollCircle.addEventListener("mouseleave", () => {
+    // Pendiente
+});
 
 const softwareDevelopment = document.getElementById("section1");
 const productDesign = document.getElementById("section2");
@@ -81,37 +86,37 @@ function modifySection(boxOrSection, positionArrayText, numberBox, section) {
 }
 
 function changeText(texto) {
-    textContentSection.textContent = texto;
+  textContentSection.textContent = texto;
+}
+
+function changeBorder(section) {
+  section.style.borderBottom = "1px solid transparent";
+}
+
+function changeBackground(box) {
+  box.style.backgroundColor = "#fff";
+}
+
+function searchBox(numberBox) {
+  let box = null;
+  switch (numberBox) {
+    case 1:
+      box = box1;
+      break;
+    case 2:
+      box = box2;
+      break;
+    case 3:
+      box = box3;
+      break;
+    case 4:
+      box = box4;
+      break;
+    default:
+      break;
   }
-  
-  function changeBorder(section) {
-    section.style.borderBottom = "1px solid transparent";
-  }
-  
-  function changeBackground(box) {
-    box.style.backgroundColor = "#fff";
-  }
-  
-  function searchBox(numberBox) {
-      let box = null;
-    switch (numberBox) {
-      case 1:
-          box = box1;
-        break;
-      case 2:
-          box = box2;
-        break;
-      case 3:
-          box = box3;
-        break;
-      case 4:
-          box = box4;
-        break;
-      default:
-        break;
-    }
-    return box;
-  }
+  return box;
+}
 
 modifySection(webDevelopment, 3, 4, webDevelopment);
 modifySection(serverArchitecture, 2, 3, serverArchitecture);
@@ -122,10 +127,31 @@ modifySection(box3, 2, 3, serverArchitecture);
 modifySection(box2, 1, 2, productDesign);
 modifySection(box1, 0, 1, softwareDevelopment);
 
-const cardMobile = document.querySelector('.cardMobile');
-const backMobile = document.querySelector('.backMobile');
+const cardMobile = document.querySelector(".cardMobile");
+const backMobile = document.querySelector(".backMobile");
 
-cardMobile.addEventListener('mouseenter', () =>{
-    cardMobile.style.zIndex = 1;
-    backMobile.style.zIndex = 9999;
-})
+// cardMobile.addEventListener('mouseenter', () =>{
+//     backMobile.style.transform = 'rotateY(0)';
+// })
+
+// cardMobile.addEventListener('mouseleave', () =>{
+//     backMobile.style.transform = 'rotateY(180)';
+// })
+
+const languageButton = document.getElementById("languageButton");
+
+languageButton.addEventListener("click", () => {
+  if (languageButton.classList.contains("es")) {
+    languageButton.classList.remove("es");
+    languageButton.classList.add("en");
+    languageButton.textContent = "ES";
+  } else if (languageButton.classList.contains("en")) {
+    languageButton.classList.remove("en");
+    languageButton.classList.add("es");
+    languageButton.textContent = "EN";
+  }
+});
+
+function cambiarIdiomaIngles() {}
+
+function cambiarIdiomaEspañol() {}
