@@ -480,10 +480,25 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap:140px;
-  animation: scrollImages 30s linear infinite; /* Ajusta el tiempo según tu preferencia */
+  animation: scrollImages 40s linear infinite; /* Ajusta el tiempo según tu preferencia */
 }
 
 .imagesContainer img {
+  height: auto; /* Mantén la proporción */
+  /* Añade estilos adicionales según sea necesario */
+}
+
+.imagesContainer2 {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:140px;
+  margin-top: 5vh;
+  animation: scrollImages 40s linear infinite; /* Ajusta el tiempo según tu preferencia */
+  animation-direction: reverse; /* Cambia la dirección de la animación */
+}
+
+.imagesContainer2 img {
   height: auto; /* Mantén la proporción */
   /* Añade estilos adicionales según sea necesario */
 }
