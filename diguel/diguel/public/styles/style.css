@@ -400,7 +400,6 @@ nav {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  gap: 40px;
 }
 
 .sectionsCont > ul > li {
@@ -501,13 +500,6 @@ nav {
   margin-top: 15vh;
 }
 
-.contact {
-  width: 90%;
-  margin: auto;
-  margin-top: 15vh;
-  height: 20vh;
-}
-
 .scrollContainer {
   width: 90%;
   font-size: calc(var(--title-size) * 0.7);
@@ -555,29 +547,11 @@ nav {
   padding: 3rem 3rem;
   background-position: center;
   text-transform: uppercase;
-  border: 1px solid #131313;
   transition: transform 0.8s;
 }
 
 .cardMobile {
   position: relative;
-}
-
-.front,
-.back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-}
-
-.back {
-  background-color: #ccc;
-  transform: rotateY(180deg);
-}
-
-.card:hover {
-  transform: rotateY(180deg);
 }
 
 .title {
@@ -601,7 +575,7 @@ nav {
 }
 
 .detailTitle > p {
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   padding: 10px;
   border-radius: 9999px;
 }
@@ -627,45 +601,156 @@ nav {
   background-color: #fff;
   height: 100vh;
   margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .containerBestProjects {
   width: 90%;
   margin: auto;
+
+  h2 {
+    font-family: "MonumentExtended", "sans-serif";
+    font-size: calc(var(--title-size) * 1);
+    font-weight: bold;
+    color: #000;
+    line-height: 82%;
+  }
+
+  p {
+    font-family: "MonumentGrotesk", "sans-serif";
+    font-size: calc(var(--title-size) * 0.3);
+    color: #000;
+    line-height: 82%;
+  }
 }
 
-.containerBestProjects > h2 {
-  font-family: "MonumentExtended", "sans-serif";
-  font-size: calc(var(--title-size) * 1);
-  font-weight: bold;
-  color: #000;
-}
-
-.containerBestProjects > p {
-  font-family: "MonumentGrotesk", "sans-serif";
-  font-size: calc(var(--title-size) * 0.3);
-  color: #000;
-  line-height: 82%;
-}
-
-.team{
+/* Asegúrate de que la altura del contenedor principal permita el scroll */
+.scrollBestProjects {
   width: 90%;
-  margin:auto;
+  height: 70%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.team {
+  width: 90%;
+  margin: auto;
   height: 70vh;
   margin-top: 15vh;
 }
 
-.containerCardsTeam{
+.containerCardsTeam {
   width: 100%;
-  display:grid;
-  grid-template-columns: repeat(4,1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   height: 90%;
   background-color: red;
   margin-top: 5vh;
 }
 
-.cardTeam1{
+.cardTeam1 {
   grid-column: 1/4;
   height: 100%;
-  
+}
+
+.contact {
+  width: 100%;
+  margin-top: 15vh;
+  height: 20vh;
+  background-color: #fff;
+  padding-top: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 50vh;
+  margin-top: 15vh;
+
+  .contentFooter {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .titleFooter {
+      width: 50%;
+      height: 100%;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .contTitle {
+        h2 {
+          font-family: "MonumentExtended", "sans-serif";
+          font-size: calc(var(--title-size) * 1);
+          font-weight: bold;
+          color: #fff;
+          line-height: 82%;
+        }
+
+        p {
+          font-family: "MonumentGrotesk", "sans-serif";
+          font-size: calc(var(--title-size) * 0.2);
+          color: #fff;
+        }
+      }
+
+    }
+
+    .detailsFooter {
+      width: 50%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .firstColDetailFooter {
+        grid-column: 1/2;
+        height: 90%;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          li {
+            list-style: none;
+
+            a {
+              font-family: "MonumentGrotesk", "sans-serif";
+              text-decoration: none;
+              line-height: 0%;
+              font-size: calc(var(--title-size) * 0.2);
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .secondColDetailFooter {
+        grid-column: 2/2;
+        height: 90%;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          li {
+            list-style: none;
+
+            a {
+              font-family: "MonumentGrotesk", "sans-serif";
+              text-decoration: none;
+              line-height: 0%;
+              font-size: calc(var(--title-size) * 0.2);
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -106,7 +106,7 @@
       <section class="company">
         <h1>DIGUEL</h1>
         <div class="descrip">
-          <p>
+          <p class=".reveal-type-principal">
             We help <span class="red-text">you</span> turn your dreams
             <span class="red-text">into a digital reality</span>,<br />
             and we do it simple.
@@ -130,12 +130,12 @@
       </div>
     </header>
 
-    <section data-scroll-container class="about container">
+    <section class="about container" id="about">
       <div class="titleAbout">
         <p>About</p>
       </div>
       <div class="descripAbout">
-        <h2 data-scroll data-scroll-speed="2">
+        <h2 data-scroll-to="#about" data-scroll-speed="1" class="reveal-type">
           A <span class="spanAbout">team</span> with big ideas. We have the
           <span class="spanAbout"> variety</span> of an agency and the
           <span class="spanAbout">expertise</span> of a studio.
@@ -157,7 +157,9 @@
         <div class="displayCont">
           <div class="firstSection">
             <div class="titleCont">
-              <p>CONTRIBUTION,<br />PARTICIPATION,<br />ATTRIBUTION</p>
+              <p class="reveal-type">
+                CONTRIBUTION,<br />PARTICIPATION,<br />ATTRIBUTION
+              </p>
             </div>
             <div class="sectionsCont">
               <ul>
@@ -241,14 +243,6 @@
               </div>
             </div>
           </div>
-          <div class="back backMobile">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-              itaque! Delectus culpa in earum incidunt aperiam dolor id iusto
-              possimus ipsam beatae debitis ullam, fuga laboriosam unde porro,
-              officiis minus.
-            </p>
-          </div>
         </div>
         <div class="card cardQuality">
           <div class="title">
@@ -278,18 +272,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="firstWork">
-        <div class="titleWork">
-          <p>CODEBUILDERS</p>
-        </div>
-        <div class="imgContainerWork">
-          <img src="../public/images/209shots_so.jpg" alt="">
-          <img src="../public/images/343shots_so.jpg" alt="">
-        </div>
-        <div class="descripWork">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi delectus odio officiis doloribus eius adipisci ducimus quos! Deleniti iusto commodi, ad quae delectus voluptates? Repellat, similique perferendis? Nobis, fuga vero!</p>
-        </div>
-      </div> -->
     </section>
 
     <section class="bestProjects">
@@ -297,6 +279,7 @@
         <h2>DIGUEL</h2>
         <p>The best of our work. Ready to see it ?</p>
       </div>
+      <div class="scrollBestProjects"></div>
     </section>
 
     <section class="team">
@@ -304,30 +287,79 @@
         <p>Team</p>
       </div>
       <div class="containerCardsTeam">
-        <div class="cardTeam cardTeam1">
+        <div class="cardTeam cardTeam1"></div>
+      </div>
+    </section>
 
+    <section class="contact"></section>
+    <footer>
+      <div class="contentFooter">
+        <div class="titleFooter">
+          <div class="contTitle">
+            <h2>DIGUEL</h2>
+            <p>Software Developers and Web Interfaces</p>
+          </div>
+        </div>
+        <div class="detailsFooter">
+          <div class="firstColDetailFooter">
+            <ul>
+              <li><a href="">About</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Work</a></li>
+              <li><a href="">Team</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <div class="secondColDetailFooter">
+            <ul>
+              <li><a href="">Terms & Conditions</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Cookies Policy</a></li>
+              <br />
+              <li><a href="">Twitter</a></li>
+              <li><a href="">LinkedIn</a></li>
+              <li><a href="">Instagram</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="../public/script/index.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
 
-    <section class="contact">
-      <div class="titleAbout">
-        <p>Contact</p>
-      </div>
-      <!-- <div class="scrollContainer">
-        <a href="mailto:diguelgroup@gmail.com">diguelgroup@gmail.com</a>
-      </div> -->
-    </section>
-    <footer></footer>
-    <script src="locomotive-scroll.min.js"></script>
-    <script src="index.js"></script>
-    <!-- <script>
-      (function () {
-        const scroll = new LocomotiveScroll({
-          el: document.querySelector("[data-scroll-container]"),
-          smooth: true,
+      const splitTypes = document.querySelectorAll(".reveal-type");
+
+      splitTypes.forEach((char, i) => {
+        const text = new SplitType(char, { types: "chars" });
+
+        gsap.from(text.chars, {
+          opacity: 0.2,
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: char,
+            start: "top 80%",
+            end: "top 20%",
+            scrub: true,
+            markers: false,
+          },
         });
-      })();
-    </script> -->
+      });
+
+      const lenis = new Lenis();
+
+      lenis.on("scroll", (e) => {});
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
   </body>
 </html>

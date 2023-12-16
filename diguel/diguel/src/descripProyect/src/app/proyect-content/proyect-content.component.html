@@ -1,0 +1,10 @@
+<section class="proyectContent">
+    <ul>
+        @for (proyect of proyects; track proyect.id) {
+            <li>{{ proyect.nombreProyecto }}</li>
+            <li>{{ proyect.fechaProyecto }}</li>
+            <li>{{ proyect.descripcionProyecto }}</li>
+        }
+
+    </ul>
+</section>
