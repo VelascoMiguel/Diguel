@@ -1,120 +1,64 @@
-const scrollCircle = document.querySelector(".scrollCircle");
-const circleOne = document.querySelector(".circleOne");
-const circleTwo = document.querySelector(".circleTwo");
+const fondoCaja1 = document.querySelector(".firstFondoCaja1");
+const fondoCaja2 = document.querySelector(".firstFondoCaja2");
+const fondoCaja3 = document.querySelector(".firstFondoCaja3");
+const fondoCaja4 = document.querySelector(".firstFondoCaja4");
+const fondoCaja5 = document.querySelector(".firstFondoCaja5");
 
-scrollCircle.addEventListener("mousemove", (e) => {
-  const x = e.clientX - scrollCircle.getBoundingClientRect().left;
-  const y = e.clientY - scrollCircle.getBoundingClientRect().top;
+const cajasCard1 = document.querySelectorAll(".cajaCard1");
+const cajasCard2 = document.querySelectorAll(".cajaCard2");
+const cajasCard3 = document.querySelectorAll(".cajaCard3");
+const cajasCard4 = document.querySelectorAll(".cajaCard4");
+const cajasCard5 = document.querySelectorAll(".cajaCard5");
 
-  circleTwo.style.left = `${x}px`;
-  circleTwo.style.top = `${y}px`;
 
-  circleOne.style.left = `${x / 1.1}px`; // Ajusta la velocidad de seguimiento cambiando este valor
-  circleOne.style.top = `${y / 1.1}px`; // Ajusta la velocidad de seguimiento cambiando este valor
-});
-
-scrollCircle.addEventListener("mouseleave", () => {
-  // Pendiente
-});
-
-const softwareDevelopment = document.getElementById("section1");
-const productDesign = document.getElementById("section2");
-const serverArchitecture = document.getElementById("section3");
-const webDevelopment = document.getElementById("section4");
-
-const box1 = document.getElementById("boxSection1");
-const box2 = document.getElementById("boxSection2");
-const box3 = document.getElementById("boxSection3");
-const box4 = document.getElementById("boxSection4");
-
-const textContentSection = document.getElementById("textContentSection");
-
-const texts = [
-  "We specialize in crafting bespoke software solutions that empower businesses by tackling their challenges head-on. Our team thrives on unraveling complexities, seeking innovative paths, and delivering tailored software that resolves your unique needs, fostering growth and efficiency.",
-  "Our team of visionary designers crafts captivating interfaces, translating your ideas into stunning products. We blend creativity with functionality, ensuring user-centric designs that elevate your product, enhancing its appeal and usability.",
-  "With seasoned experts, we navigate the intricate realm of server architecture, tackling communication challenges between businesses. From crafting complex server ecosystems to seamless API integrations, our proficiency ensures robust solutions and streamlined operations.",
-  "Collaborating seamlessly with designers, we transform your web presence, ensuring an SEO-optimized platform. We tailor your site to fit your business needs, driving growth, enhancing visibility, and delivering a compelling user experience.",
-];
-
-let lastBox = null;
-let lastSection = null;
-
-function modifySection(boxOrSection, positionArrayText, numberBox, section) {
-  boxOrSection.addEventListener("mouseenter", () => {
-    if (lastBox != null && lastSection != null) {
-      lastBox.style.backgroundColor = "#131313";
-      changeBorder(lastSection);
-    }
-    section.style.borderBottom = "1px solid #6d6d6d";
-    changeText(texts[positionArrayText]);
-    let boxSearched = searchBox(numberBox);
-    changeBackground(boxSearched);
-    lastBox = boxSearched;
-    lastSection = section;
+function cambiarFondo(fondoCaja, cajasCard) {
+  fondoCaja.addEventListener("mouseenter", () => {
+    cajasCard.forEach((caja, index) => {
+      caja.classList.add("inactive");
+      switch (index) {
+        case 0:
+          caja.style.transform = "translate(-100%, -100%)";
+          break;
+        case 1:
+          caja.style.transform = "translate(100%, -100%)";
+          break;
+        case 2:
+          caja.style.transform = "translate(-100%, 100%)";
+          break;
+        case 3:
+          caja.style.transform = "translate(100%, 100%)";
+          break;
+        default:
+          break;
+      }
+    });
   });
+
+  fondoCaja.addEventListener("mouseleave", () =>{
+    cajasCard.forEach((caja, index) => {
+      caja.classList.add("inactive");
+      switch (index) {
+        case 0:
+          caja.style.transform = "translate(0%, 0%)";
+          break;
+        case 1:
+          caja.style.transform = "translate(0%, 0%)";
+          break;
+        case 2:
+          caja.style.transform = "translate(0%, 0%)";
+          break;
+        case 3:
+          caja.style.transform = "translate(0%, 0%)";
+          break;
+        default:
+          break;
+      }
+    });
+  })
 }
 
-function changeText(texto) {
-  textContentSection.textContent = texto;
-}
-
-function changeBorder(section) {
-  section.style.borderBottom = "1px solid transparent";
-}
-
-function changeBackground(box) {
-  box.style.backgroundColor = "#fff";
-}
-
-function searchBox(numberBox) {
-  let box = null;
-  switch (numberBox) {
-    case 1:
-      box = box1;
-      break;
-    case 2:
-      box = box2;
-      break;
-    case 3:
-      box = box3;
-      break;
-    case 4:
-      box = box4;
-      break;
-    default:
-      break;
-  }
-  return box;
-}
-
-modifySection(webDevelopment, 3, 4, webDevelopment);
-modifySection(serverArchitecture, 2, 3, serverArchitecture);
-modifySection(productDesign, 1, 2, productDesign);
-modifySection(softwareDevelopment, 0, 1, softwareDevelopment);
-modifySection(box4, 3, 4, webDevelopment);
-modifySection(box3, 2, 3, serverArchitecture);
-modifySection(box2, 1, 2, productDesign);
-modifySection(box1, 0, 1, softwareDevelopment);
-
-
-const languageButton = document.getElementById("languageButton");
-
-languageButton.addEventListener("click", () => {
-  if (languageButton.classList.contains("es")) {
-    languageButton.classList.remove("es");
-    languageButton.classList.add("en");
-    languageButton.textContent = "ES";
-  } else if (languageButton.classList.contains("en")) {
-    languageButton.classList.remove("en");
-    languageButton.classList.add("es");
-    languageButton.textContent = "EN";
-  }
-});
-
-function cambiarIdiomaIngles() {
-
-}
-
-function cambiarIdiomaEspañol() {
-  
-}
+cambiarFondo(fondoCaja1,cajasCard1);
+cambiarFondo(fondoCaja2,cajasCard2);
+cambiarFondo(fondoCaja3,cajasCard3);
+cambiarFondo(fondoCaja4,cajasCard4);
+cambiarFondo(fondoCaja5,cajasCard5);
