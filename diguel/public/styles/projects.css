@@ -1,0 +1,80 @@
+a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.mainContentHeader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: "MonumentExtended", "sans-serif";
+    font-size: calc(var(--title-size) * 1.5);
+  }
+
+  p {
+    font-size: calc(var(--title-size) * 0.2);
+  }
+}
+
+.projects {
+  width: 80%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card {
+    height: 70vh;
+    border: 1px solid #fff;
+    border-radius: 16px;
+
+    .contentCard {
+      width: 90%;
+      height: 90%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: end;
+      gap:20px;
+
+      h3 {
+        font-family: "MonumentExtended", "sans-serif";
+        font-size: calc(var(--title-size) * 0.2);
+      }
+
+      #descripProject{
+        color:rgba(255,255,255,.7);
+      }
+
+      #typeProject{
+        font-family: "Matter";
+        border:1px solid #fff;
+        border-radius: 16px;
+        padding:10px 20px 10px 20px;
+      }
+    }
+  }
+
+  .card1 {
+    width: 30%;
+  }
+
+  .card2 {
+    width: 68%;
+  }
+
+  .cardIcse{
+    background-image: url(../images/ICSE.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
