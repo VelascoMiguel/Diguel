@@ -1,9 +1,0 @@
-.mainContent{
-    display:flex;
-    width: 60%;
-    background-color: green;
-    margin:auto;
-    height: 100%;
-    flex-direction: column;
-    gap:40px;
-}

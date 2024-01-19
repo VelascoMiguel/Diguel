@@ -3,106 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../../public/styles/contact.css" />
-    <link rel="stylesheet" href="../../public/styles/style.css">
+    <link rel="stylesheet" href="../../public/styles/style.css" />
     <title>Contact</title>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="navContainer">
-          <div class="logo">
-            <p>DG</p>
-          </div>
-          <div class="mini-desktop">
-            <a class="href" href="#about">NOSOTROS</a>
-            <a class="href" href="#services">SERVICIOS</a>
-            <a class="href" href="#services">PROYECTOS</a>
-            <a class="href" href="#work">EQUIPO</a>
-            <a id="buttonContact" class="href" href="#contact">CONTACTO</a>
-          </div>
-          <!-- <div class="dictionary">
-            <button id="languageButton" class="language-btn es">EN</button>
-          </div> -->
-        </div>
-      </nav>
-    </header>
-    <section class="containerContact">
       <div class="firstPage page">
         <div class="containerInfoPage">
           <div class="titleFirstPage">
-            <h1>CONTACT</h1>
-            <p>
-              We are excited to work with you ! Homewer, we need some details
-              about your project to guide you to the best possible solution.
-            </p>
+            <div class="contAuxiliar">
+              <h1>CONTACT</h1>
+              <p>
+                Estamos emocionados de poder trabajar con vos ! 
+              </p>
+            </div>
+            <form action="">
+              <div class="rowInput">
+                <p>Mi nombre es</p>
+                <input type="text" name="" id="" />
+              </div>
+              <div class="rowInput">
+                <p>Mi email es</p>
+                <input type="text" name="" id="" />
+              </div>
+              <div class="rowInput">
+                <p>Mi compañia es</p>
+                <input type="text" name="" id="" />
+              </div>
+              <div class="rowInput">
+                <p>Mi presupuesto es aproximadamente de</p>
+                <input type="number" name="" id="" />
+              </div>
+              <div class="lastRowInput rowInput">
+                <p>¿Como nos conociste?</p>
+                <input type="text" name="" id="">
+              </div>
+              <div class="lastRowInput rowInput">
+                <p>Contanos acerca de tu proyecto o idea</p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </div>
+              <button>Enviar</button>
+            </form>
           </div>
-          <a class="btnContinue" href=""
-            ><div class="point"></div>
-            <button class="btnFirstpage">CONTINUE</button></a
-          >
         </div>
       </div>
 
-      <div class="secondPage page">
-        <div class="containerInfoSecondPage">
-          <div class="presentation">
-            <div class="titleSecondPage">
-              <p>Before we start,<br />What's your name?</p>
+      <!-- <div class="secondPage page">
+          <div class="containerInfoSecondPage">
+            <div class="presentation">
+              <div class="titleSecondPage">
+                <p>Before we start,<br />What's your name?</p>
+              </div>
+              <div class="nameAndLastName">
+                <input type="text" /><input type="text" />
+              </div>
             </div>
-            <div class="nameAndLastName">
-              <input type="text" /><input type="text" />
+            <div class="lookingServices">
+              <p>What services are you looking for ?</p>
+              <div class="offerServices">
+                <ul>
+                  <li>Software Development</li>
+                  <li>Software Development</li>
+                  <li>Software Development</li>
+                  <li>Software Development</li>
+                  <li>Software Development</li>
+                  <li>Software Development</li>
+                </ul>
+              </div>
             </div>
+            <a class="btnContinue" href=""
+              ><div class="point"></div>
+              <button class="btnFirstpage">CONTINUE</button></a
+            >
           </div>
-          <div class="lookingServices">
-            <p>What services are you looking for ?</p>
-            <div class="offerServices">
-              <ul>
-                <li>Software Development</li>
-                <li>Software Development</li>
-                <li>Software Development</li>
-                <li>Software Development</li>
-                <li>Software Development</li>
-                <li>Software Development</li>
-              </ul>
-            </div>
-          </div>
-          <a class="btnContinue" href=""
-            ><div class="point"></div>
-            <button class="btnFirstpage">CONTINUE</button></a
-          >
         </div>
-      </div>
-
-      <div class="thirdPage page">
-        <div class="containerInfoThirdPage">
-          <div class="titleThirdPage">
-            <p>Tell us what is in your mind.</p>
-            <p>Fill the form, or send an email to diguel@gmail.com</p>
+  
+        <div class="thirdPage page">
+          <div class="containerInfoThirdPage">
+            <div class="titleThirdPage">
+              <p>Tell us what is in your mind.</p>
+              <p>Fill the form, or send an email to diguel@gmail.com</p>
+            </div>
+            <form action="">
+              <div class="contInput">
+                <p>Email</p>
+                <input type="text" placeholder="Email" />
+              </div>
+              <div class="contInput">
+                <p>Company</p>
+                <input type="text" />
+              </div>
+              <div class="contInput">
+                <p>How you met us ?</p>
+                <input type="text" />
+              </div>
+              <div class="contInput">
+                <p>Tell us about your project.</p>
+                <input type="text" />
+              </div>
+            </form>
           </div>
-          <form action="">
-            <div class="contInput">
-              <p>Email</p>
-              <input type="text" placeholder="Email" />
-            </div>
-            <div class="contInput">
-              <p>Company</p>
-              <input type="text" />
-            </div>
-            <div class="contInput">
-              <p>How you met us ?</p>
-              <input type="text" />
-            </div>
-            <div class="contInput">
-              <p>Tell us about your project.</p>
-              <input type="text" />
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
+        </div> -->
+    </header>
   </body>
 </html>
