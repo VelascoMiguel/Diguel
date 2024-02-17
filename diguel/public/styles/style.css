@@ -1050,7 +1050,7 @@ footer {
       cursor: pointer;
       padding-bottom: 5px;
       border-bottom: 1px solid transparent;
-      font-size: calc(var(--title-size) * 0.17);
+      font-size: calc(var(--title-size) * 0.15);
     }
   }
 
@@ -1064,7 +1064,7 @@ footer {
   }
 
   .itemsService > li > p {
-    font-size: calc(var(--title-size) * 0.15) !important;
+    font-size: calc(var(--title-size) * 0.17) !important;
   }
 
   /* Estilos mejores proyectos */
