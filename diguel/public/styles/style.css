@@ -1210,6 +1210,8 @@ footer {
 
   .sectionsCont > ul {
     flex-wrap: wrap;
+    flex-direction: column;
+    gap:20px;
   }
 
   /* Estilos Servicios */
