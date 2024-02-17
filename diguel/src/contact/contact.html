@@ -29,30 +29,30 @@
               <h1>CONTACTO</h1>
               <p>Estoy emocionado de poder trabajar con vos !</p>
             </div>
-            <form action="">
+            <form action="mail.php" method="post">
               <div class="rowInput">
                 <p>Mi nombre es</p>
-                <input type="text" name="" id="" />
+                <input type="text" name="nombre" id="" autocomplete="name" required/>
               </div>
               <div class="rowInput">
                 <p>Mi email es</p>
-                <input type="text" name="" id="" />
+                <input type="text" name="email" autocomplete="email" id="" required/>
               </div>
               <div class="rowInput">
                 <p>Mi compañia es</p>
-                <input type="text" name="" id="" />
+                <input type="text" name="nombreCompañia" id="" required/>
               </div>
               <div class="rowInput">
                 <p>Mi presupuesto es aproximadamente de</p>
-                <input type="number" name="" id="" />
+                <input type="number" name="presupuesto" id="" required/>
               </div>
               <div class="lastRowInput rowInput">
                 <p>¿Como nos conociste?</p>
-                <input type="text" name="" id="" />
+                <input type="text" name="" id=""/>
               </div>
               <div class="lastRowInput rowInput">
                 <p>Contanos acerca de tu proyecto o idea</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="message" id="" cols="30" rows="10"></textarea>
               </div>
               <button>Enviar</button>
             </form>
