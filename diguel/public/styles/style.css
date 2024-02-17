@@ -1059,15 +1059,12 @@ footer {
   /*  */
 
   /* Estilos Servicios */
-  .contentCards {
-  }
-
   .cardWork {
     width: 40% !important;
   }
 
   .itemsService > li > p {
-    font-size: calc(var(--title-size) * 0.18) !important;
+    font-size: calc(var(--title-size) * 0.15) !important;
   }
 
   /* Estilos mejores proyectos */
@@ -1268,11 +1265,7 @@ footer {
 
   /* Estilos Footer */
   footer {
-    height: 15vh;
-
-    .contentFooter {
-      flex-direction: column;
-    }
+    height: 10vh;
   }
 }
 
