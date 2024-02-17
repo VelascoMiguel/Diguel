@@ -156,7 +156,6 @@ a{
   width: 90%;
   margin:auto;
     h1 {
-      font-family: "MonumentExtended", "sans-serif";
       font-size: calc(var(--title-size) * 0.7);
     }
   }
@@ -164,5 +163,11 @@ a{
 
 
 @media screen and (max-width: 500px) {
+
+  .mainContentHeader{
+      h1 {
+        font-size: calc(var(--title-size) * 0.6);
+      }
+    }
 
 }
