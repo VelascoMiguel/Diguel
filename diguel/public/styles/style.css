@@ -1184,15 +1184,14 @@ footer {
     font-size: calc(var(--title-size) * 0.8) !important;
   }
 
+  .contact .contContact h2 {
+    font-size: calc(var(--title-size) * 0.6);
+}
 
 }
 
 @media screen and (max-width: 500px) {
   /* Estilos Header */
-
-  .company #nameCompany {
-    font-size: calc(var(--title-size) * 0.9);
-  }
 
   .descrip p {
     font-size: calc(var(--title-size) * 0.25);
@@ -1264,7 +1263,7 @@ footer {
   }
 
   .contact .contContact h2 {
-    font-size: calc(var(--title-size) * 0.9);
+    font-size: calc(var(--title-size) * 0.6);
   }
 
   /* Estilos Footer */
