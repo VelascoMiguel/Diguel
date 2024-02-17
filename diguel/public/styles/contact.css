@@ -319,6 +319,7 @@ header {
       display:flex;
       flex-direction: column;
       gap:20px;
+      margin-top: 2vh;
 
       h1 {
         font-size: calc(var(--title-size) * 0.7);
