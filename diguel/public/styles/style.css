@@ -68,6 +68,28 @@
   src: url(../font/matter-light.woff2) format("woff2");
 }
 
+a {
+  text-decoration: none;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -136,10 +158,20 @@ header {
 nav {
   width: 100%;
   margin: auto;
-  height: 10%;
+  height: 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 999;
+  transition: all 0.5s ease-in-out;
 }
 
 .navContainer {
@@ -147,28 +179,11 @@ nav {
   height: 10%;
   margin: auto;
   display: flex;
-  padding-bottom: 1.5rem;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
 
-  .logo {
-    width: 10%;
-    height: 100%;
-
-    img {
-      width: 60%;
-      height: 100%;
-    }
-
-    p {
-      font-family: "MonumentExtended";
-      font-size: 20px;
-    }
+  .logo{
+    font-family: "MonumentExtended";
   }
 
   .mini-desktop {
@@ -185,14 +200,14 @@ nav {
     a:hover {
       border-bottom: 1px solid #f6632f;
     }
-
-    #buttonContact {
-      background-color: #f6632f;
-      padding: 10px 20px 10px 20px;
-      color: #fff;
-      border-radius: 16px;
-    }
   }
+}
+
+#buttonContact {
+  background-color: #f6632f;
+  padding: 10px 20px 10px 20px;
+  color: #fff;
+  border-radius: 16px;
 }
 
 /*  */
@@ -410,8 +425,8 @@ nav {
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 40px;
 
     .cardWork {
       width: 20%;
@@ -574,7 +589,6 @@ nav {
   .fondoImagenWork {
     width: 100%;
     height: 100%;
-    background-image: url(../images/ICSE.png);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -615,6 +629,52 @@ nav {
       }
     }
   }
+
+  .fondoImagenWork1 {
+    background-image: url(../images/ENDOM\(3\).png);
+  }
+
+  .fondoImagenWork2 {
+    background-image: url(../images/FACILPNG.png);
+  }
+
+  .fondoImagenWork3 {
+    background-image: url(../images/BC1.png);
+  }
+
+  .fondoImagenWork4 {
+    background-image: url(../images/CODEBUILDERS.png);
+  }
+}
+
+.cardFacilPNG {
+  .thefront .fondoImagenWork .descripcionWork .titleWork {
+    color: #000;
+
+    p {
+      border: 1px solid #000;
+    }
+  }
+}
+
+.cardCodebuilders {
+  .thefront .fondoImagenWork .descripcionWork .titleWork {
+    color: #000;
+
+    p {
+      border: 1px solid #000;
+    }
+  }
+}
+
+.cardEndom {
+  .thefront .fondoImagenWork .descripcionWork .titleWork {
+    color: #000;
+
+    p {
+      border: 1px solid #000;
+    }
+  }
 }
 
 /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
@@ -627,7 +687,6 @@ nav {
   border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
-  background-image: url(../images/icse.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: #333;
@@ -658,6 +717,22 @@ nav {
 
 .lastCard:hover {
   transform: none;
+}
+
+.backFacilPNG {
+  background-image: url(../images/backFacilPNG.jpg);
+}
+
+.backEndom {
+  background-image: url(../images/backEndom.jpg);
+}
+
+.backBuenConsejo {
+  background-image: url(../images/icse.jpg);
+}
+
+.backCodebuilders {
+  background-image: url(../images/backCodebuilders.jpg);
 }
 
 /*                 */
@@ -710,7 +785,7 @@ nav {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 70%;
   margin-top: 3vh;
@@ -975,43 +1050,162 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+  /* Estilos Header */
+  .descrip p {
+    width: 90%;
+    font-size: calc(var(--title-size) * 0.32);
+  }
+
+  /* Estilos About */
+  .descripAbout h2 {
+    font-size: calc(var(--title-size) * 0.45);
+  }
 
   /* Estilos Cube Container (Valores) */
-  .services{
+  .services {
     height: 30vh;
   }
 
-  .titleCont
-p {
+  .titleCont p {
     font-size: calc(var(--title-size) * 0.4);
-}
-
-  .containerBox{
-    display:none;
   }
 
-  .displayCont{
+  .containerBox {
+    display: none;
+  }
+
+  .displayCont {
     width: 100%;
   }
 
   /* Estilos Servicios */
-  .work
-.contentCards
-.cardWork
-.firstDivisionCardWork
-#timeService {
-  font-size: calc(var(--title-size) * 0.2);
-}
+  .cardWork {
+    width: 100% !important;
+  }
 
-  .work .contentCards .cardWork .firstDivisionCardWork #nameService {
+  .work .contentCards .cardWork .firstDivisionCardWork #timeService {
     font-size: calc(var(--title-size) * 0.3);
   }
 
+  .work .contentCards .cardWork .firstDivisionCardWork #nameService {
+    font-size: calc(var(--title-size) * 0.4);
+  }
+
   .firstDivisionCardWork > p {
-    font-size: calc(var(--title-size) * 0.25);
+    font-size: calc(var(--title-size) * 0.35);
   }
 
   .itemsService > li > p {
-    font-size: calc(var(--title-size) * 0.2) !important;
+    font-size: calc(var(--title-size) * 0.3) !important;
   }
+
+  .work .contentCards .cardWork .secondDivisionCardWork button a {
+    font-size: calc(var(--title-size) * 0.3);
+  }
+
+  /* Estilos Trabajos Realizados */
+  .thecard {
+    height: 40vh;
+  }
+
+  /* Estilos Card Team */
+  .cardTeam {
+    width: 50% !important;
+  }
+
+  .aboutTeam p {
+    width: 100%;
+    font-size: calc(var(--title-size) * 0.2);
+  }
+
+  .cardTeam .contentCardTeam p {
+    line-height: 100%;
+    font-family: "Space Grotesk";
+    font-size: calc(var(--title-size) * 0.17);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* Estilos Header */
+  .company #nameCompany {
+    font-size: calc(var(--title-size) * 0.9);
+  }
+
+  .descrip p {
+    font-size: calc(var(--title-size) * 0.25);
+  }
+
+  /* Estilos About */
+  .about {
+    margin-top: 0;
+  }
+
+  .descripAbout h2 {
+    font-size: calc(var(--title-size) * 0.4);
+  }
+
+  /* Estilos Valores */
+  .services {
+    height: 60vh;
+    margin-top: 7vh;
+  }
+
+  .sectionsCont > ul {
+    flex-wrap: wrap;
+  }
+
+  /* Estilos Servicios */
+  .cardWork {
+    height: 90vh !important;
+  }
+
+  /* Estilos Proyectos */
+  .containerBestProjects {
+    h2 {
+      font-size: calc(var(--title-size) * 0.6);
+    }
+
+    p {
+      font-size: calc(var(--title-size) * 0.25);
+    }
+  }
+
+  .thecard {
+    height: 20vh;
+    transform-style: none;
+
+    .thefront .fondoImagenWork {
+      background-size: cover;
+    }
+  }
+
+  /* Estilos Team */
+  .cardTeam {
+    width: 60% !important;
+  }
+
+  /* Estilos Contacto */
+  .contact .contContact h3 {
+    font-size: calc(var(--title-size) * 0.3);
+  }
+
+  .contact .contContact h2 {
+    font-size: calc(var(--title-size) * 0.9);
+  }
+
+  /* Estilos Footer */
+  footer {
+    height: 15vh;
+
+    .contentFooter {
+      flex-direction: column;
+    }
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
 }

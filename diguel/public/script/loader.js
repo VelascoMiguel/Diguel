@@ -22,6 +22,8 @@ const segundoCharCol2 = document.querySelector(".char-3");
 const primerCharCol3 = document.querySelector(".char-4");
 const segundoCharCol3 = document.querySelector(".char-5");
 
+const primerCharCol4 = document.querySelector(".char-6");
+
 function loader() {
   let totalDuration = 0;
   nameCompany.style.color = "#000";
@@ -60,6 +62,7 @@ function loader() {
       case 4:
         setTimeout(() => {
           col.style.height = "0";
+          primerCharCol4.style.color = "#fff";
         }, duration);
         break;
 

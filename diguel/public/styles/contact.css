@@ -17,6 +17,18 @@
   src: url(../font/matter-light.woff2) format("woff2");
 }
 
+a{
+  color:#fff;
+  text-decoration: none;
+}
+
+.redirectHome{
+  position: fixed;
+  top: 20px;
+  left:40px;
+  font-size: 30px;
+}
+
 :root {
   --title-size: max(5em, 7.5vw);
 }

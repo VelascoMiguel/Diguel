@@ -11,10 +11,10 @@ const box4 = document.getElementById("boxSection4");
 const textContentSection = document.getElementById("textContentSection");
 
 const texts = [
-  "Nuestro objetivo principal, es empoderarte a vos, y a tu marca. Buscamos posicionarte como el mejor dentro de tu categoria, ofreciendo un producto o servicio con una calidad unica y distintiva, llevando tu nombre y conversión a otro nivel.",
-  "En cada proyecto, buscamos un crecimiento conjunto. Más que simplemente proveer soluciones de desarrollo web, nos comprometemos a establecer relaciones sólidas y a cultivar un terreno fértil para el crecimiento mutuo. Cada logro de nuestros clientes es también nuestro éxito, y estamos dedicados a trabajar juntos para alcanzar metas ambiciosas y evolucionar en este camino hacia el progreso digital.",
-  "La adaptabilidad es nuestro motor. En un mundo tecnológico en constante cambio, nos enorgullecemos de nuestra capacidad para adaptarnos ágilmente a las nuevas tendencias, desafíos y demandas del mercado. Nos comprometemos a ser tu aliado flexible y receptivo, ajustándonos a tus necesidades cambiantes y ofreciendo soluciones innovadoras y escalables que evolucionen con vos.",
-  "Somos fieles creyentes, que para obtener los resultados que queremos tanto para nuestros clientes como para nosotros, la pasión es un pilar clave. No hay resultados increibles sin pasión, es el punto de quiebre que nos permite sobrepasar dificultades y brindar los resultados que deseamos.",
+  "Mi objetivo principal, es empoderarte a vos, y a tu marca. Busco posicionarte como el mejor dentro de tu categoria, ofreciendo un producto o servicio con una calidad unica y distintiva, llevando tu nombre y conversión a otro nivel.",
+  "En cada proyecto, busco un crecimiento conjunto. Más que simplemente proveer soluciones de desarrollo web, me comprometo a establecer relaciones sólidas y a cultivar un terreno fértil para el crecimiento mutuo. Cada logro de mis clientes es también mi éxito, y estoy dedicado a trabajar juntos para alcanzar metas ambiciosas y evolucionar en este camino hacia el progreso digital.",
+  "La adaptabilidad es mi motor. En un mundo tecnológico en constante cambio, me enorgullezco de mi capacidad para adaptarme ágilmente a las nuevas tendencias, desafíos y demandas del mercado. Me comprometo a ser tu aliado flexible y receptivo, ajustándome a tus necesidades cambiantes y ofreciendo soluciones innovadoras y escalables que evolucionen con vos.",
+  "Soy fiel creyente, que para obtener los resultados que queremos tanto para nuestros clientes como para nosotros, la pasión es un pilar clave. No hay resultados increibles sin pasión, es el punto de quiebre que nos permite sobrepasar dificultades y brindar los resultados que deseamos.",
 ];
 
 let lastBox = null;
