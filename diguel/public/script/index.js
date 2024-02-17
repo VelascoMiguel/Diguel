@@ -1,11 +1,14 @@
-let prevScrollpos = window.pageYOffset;
+const menuHamburguer = document.querySelector('.menuHamburguer');
+const contentHamburguer = document.querySelector('.contentHamburguer');
 
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
+let isOpen = false;
+
+menuHamburguer.addEventListener('click', () => {
+  if (!isOpen) {
+    contentHamburguer.style.height = '600px'; // Sube progresivamente hasta 600
   } else {
-    document.getElementById("navbar").style.top = "-100px"; // Cambia el valor de acuerdo al tamaño de tu nav
+    contentHamburguer.style.height = '0'; // Baja lento de 600 a 0
   }
-  prevScrollpos = currentScrollPos;
-}
+  
+  isOpen = !isOpen; // Invierte el estado del menú
+});

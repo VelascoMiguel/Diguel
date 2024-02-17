@@ -34,6 +34,9 @@ a{
     height: 70vh;
     border: 1px solid #fff;
     border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     .contentCard {
       width: 90%;
@@ -50,13 +53,8 @@ a{
         font-size: calc(var(--title-size) * 0.2);
       }
 
-      #descripProject{
-        color:rgba(255,255,255,.7);
-      }
-
       #typeProject{
         font-family: "Matter";
-        border:1px solid #fff;
         border-radius: 16px;
         padding:10px 20px 10px 20px;
       }
@@ -71,10 +69,100 @@ a{
     width: 68%;
   }
 
-  .cardIcse{
-    background-image: url(../images/ICSE.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  .cardEndom{
+    background-image: url(../images/1.png);
+    color:#000;
+
+    #typeProject{
+      border:1px solid #000;
+    }
+
+    #descripProject{
+      color:rgba(44, 44, 44, 0.7);
+    }
   }
+
+  .cardBC{
+    background-image: url(../images/2.png);
+
+    #typeProject{
+      border:1px solid #fff;
+    }
+
+    #descripProject{
+      color:rgba(219, 219, 219, 0.7);
+    }
+  }
+
+  .cardCodeBuilders{
+    background-image: url(../images/4.png);
+    color:#000;
+
+    #typeProject{
+      border:1px solid #000;
+    }
+
+    #descripProject{
+      color:rgba(43, 43, 43, 0.8);
+    }
+  }
+
+  .cardFacilPNG{
+    background-image: url(../images/3.png);
+    color:#000;
+
+    #typeProject{
+      border:1px solid #000;
+    }
+
+    #descripProject{
+      color:rgba(43, 43, 43, 0.8);
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+
+  .mainContentHeader{
+    h1 {
+      font-family: "MonumentExtended", "sans-serif";
+      font-size: calc(var(--title-size) * 1);
+    }
+  }
+
+  .card1{
+    width: 100% !important;
+  }
+
+  .card2{
+    width: 100% !important;
+  }
+
+}
+
+
+@media screen and (max-width: 1300px) {
+
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  header{
+    height: 35vh !important;
+  }
+
+.mainContentHeader{
+  width: 90%;
+  margin:auto;
+    h1 {
+      font-family: "MonumentExtended", "sans-serif";
+      font-size: calc(var(--title-size) * 0.7);
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+
 }

@@ -19,19 +19,32 @@
   </head>
   <body>
     <header>
-      <nav>
+      <div class="contentHamburguer">
+        <a class="href" href="../../index.html#about">ACERCA DE MI</a>
+        <a class="href" href="../../index.html#work">SERVICIOS</a>
+        <a class="href" href="../../index.html#projects">PROYECTOS</a>
+        <a class="href" href="../../index.html#team">EQUIPO</a>
+      </div>
+
+      <nav id="navbar">
+        <div class="menuHamburguer">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
         <div class="navContainer">
-          <div class="logo"></div>
+          <div class="logo">
+            <a href="../../index.html"><p>MV</p></a>
+          </div>
           <div class="mini-desktop">
-            <a class="href" href="#about">NOSOTROS</a>
-            <a class="href" href="#services">SERVICIOS</a>
-            <a class="href" href="#services">PROYECTOS</a>
-            <a class="href" href="#work">EQUIPO</a>
+            <a class="href" href="#about">ACERCA DE MI</a>
+            <a class="href" href="#work">SERVICIOS</a>
+            <a class="href" href="#projects">PROYECTOS</a>
+            <a class="href" href="#team">EQUIPO</a>
+          </div>
+
+          <div class="">
             <a id="buttonContact" class="href" href="#contact">CONTACTO</a>
           </div>
-          <!-- <div class="dictionary">
-            <button id="languageButton" class="language-btn es">EN</button>
-          </div> -->
         </div>
       </nav>
 
@@ -46,21 +59,49 @@
 
     <section class="projects">
       <a href="" class="card1"
-        ><div class="card cardIcse">
+        ><div class="card cardEndom">
           <div class="contentCard">
-            <h3>ICSE</h3>
+            <h3>ENDOM SALUD</h3>
             <p id="descripProject">
-              Creando una experiencia unica, con soluciones integrales.
+              Internación domiciliaria, llevando la atención más calida a los
+              pacientes.
             </p>
             <p id="typeProject">Website</p>
           </div>
         </div></a
       >
-      <a class="card2" href=""> <div class="card"></div> </a>
-      <a class="card2" href=""> <div class="card"></div> </a>
-      <a class="card1" href=""> <div class="card"></div> </a>
-      <a class="card1" href=""> <div class="card"></div> </a>
-      <a class="card2" href=""> <div class="card"></div> </a>
+      <a class="card2" href="">
+        <div class="card cardBC">
+          <div class="contentCard">
+            <h3>BUEN CONSEJO</h3>
+            <p id="descripProject">
+              Distribuidora de Growshops, brindando el mejor ecommerce y precios
+              del area.
+            </p>
+            <p id="typeProject">Ecommerce</p>
+          </div>
+        </div>
+      </a>
+      <a class="card2" href="">
+        <div class="card cardCodeBuilders">
+          <div class="contentCard">
+            <h3>CODEBUILDERS</h3>
+            <p id="descripProject">Servicios de desarrollo web.</p>
+            <p id="typeProject">Website</p>
+          </div>
+        </div>
+      </a>
+      <a class="card1" href="">
+        <div class="card cardFacilPNG">
+          <div class="contentCard">
+            <h3>FÁCIL PNG</h3>
+            <p id="descripProject">
+              Banco de imágenes gratuito para diseñadores.
+            </p>
+            <p id="typeProject">Website</p>
+          </div>
+        </div>
+      </a>
     </section>
 
     <section class="contact" id="contact">
@@ -97,4 +138,5 @@
       <i class="fa fa-whatsapp my-float" aria-hidden="true"></i
     ></a>
   </body>
+  <script src="../../public/script/index.js"></script>
 </html>
