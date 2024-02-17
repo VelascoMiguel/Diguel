@@ -309,6 +309,10 @@ header {
 }
 
 @media screen and (max-width: 1000px) {
+  .redirectHome{
+    left: 20px;
+  }
+
   .titleFirstPage {
 
     .contAuxiliar {
