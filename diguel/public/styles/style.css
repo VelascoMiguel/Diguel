@@ -1205,7 +1205,7 @@ footer {
 
   /* Estilos Valores */
   .services {
-    height: 50vh;
+    height: 60vh;
   }
 
   .sectionsCont > ul {
@@ -1215,6 +1215,8 @@ footer {
   }
 
   /* Estilos Servicios */
+
+
   .cardWork {
     height: 70vh !important;
   }
