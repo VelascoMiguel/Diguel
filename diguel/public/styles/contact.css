@@ -17,15 +17,15 @@
   src: url(../font/matter-light.woff2) format("woff2");
 }
 
-a{
-  color:#fff;
+a {
+  color: #fff;
   text-decoration: none;
 }
 
-.redirectHome{
+.redirectHome {
   position: fixed;
   top: 20px;
-  left:40px;
+  left: 40px;
   font-size: 30px;
 }
 
@@ -43,8 +43,8 @@ body {
   color: #fff;
 }
 
-header{
-  display:flex;
+header {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -121,7 +121,7 @@ header{
         font-size: 20px;
       }
 
-      textarea{
+      textarea {
         width: 100%;
         color: #fff;
         background-color: #101010;
@@ -130,7 +130,6 @@ header{
         margin-bottom: 0;
         padding-top: 11px;
       }
-
     }
 
     .lastRowInput {
@@ -293,6 +292,53 @@ header{
 
       input::placeholder {
         color: rgba(255, 255, 255, 0.21);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .containerInfoPage {
+    width: 90% !important;
+    margin-top: 2vh;
+  }
+
+  .titleFirstPage form .rowInput {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .titleFirstPage {
+
+    .contAuxiliar {
+      display:flex;
+      flex-direction: column;
+      gap:20px;
+
+      h1 {
+        font-size: calc(var(--title-size) * 0.7);
+      }
+
+      p {
+        font-size: calc(var(--title-size) * 0.2);
+      }
+    }
+
+    .containerInfoPage {
+      margin-top: 5vh;
+    }
+
+    form {
+      flex-direction: column;
+      margin-top: 5vh;
+
+      .rowInput {
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
       }
     }
   }
